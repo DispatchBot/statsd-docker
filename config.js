@@ -112,6 +112,7 @@ Optional Variables:
         elasticsearch: {
            port:          process.env.ELASTICSEARCH_PORT,
            host:          process.env.ELASTICSEARCH_HOST,
+           secure:        true,
            path:          "/",
            indexPrefix:   "statsd",
            indexTimestamp: "day",     //for index statsd-2015.01.01
