@@ -113,7 +113,7 @@ Optional Variables:
            port:          process.env.ELASTICSEARCH_PORT,
            host:          process.env.ELASTICSEARCH_HOST,
            secure:        true,
-           cert:          "/etc/ssl/certs/dispatchbot-ca-chain.cert.crt"
+           cert:          "/etc/ssl/certs/dispatchbot-ca-chain.cert.crt",
            path:          "/",
            indexPrefix:   "statsd",
            indexTimestamp: "day",     //for index statsd-2015.01.01
@@ -121,7 +121,8 @@ Optional Variables:
            timerType:     "timer",
            timerDataType: "timer_data",
            gaugeDataType: "gauge",
-           formatter:     "default_format"
+           formatter:     "default_format",
+           flush_counts: false
        }
     };
 })()
