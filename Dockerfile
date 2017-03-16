@@ -19,4 +19,4 @@ ENV STATSD_FLUSH_INTERVAL 10000
 
 EXPOSE 8125/udp
 
-CMD node /usr/local/src/statsd/stats.js /etc/default/statsd.js
+CMD node /usr/local/src/statsd/stats.js /etc/statsd/statsd.js
