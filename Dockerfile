@@ -13,10 +13,10 @@ RUN mkdir /etc/statsd
 RUN apk update && \
   apk add git && \
   git clone git://github.com/etsy/statsd.git /usr/local/src/statsd && \
+  npm install git://github.com/markkimsal/statsd-elasticsearch-backend.git && \
   apk del git
 
 WORKDIR /usr/local/src/statsd
-RUN npm install git://github.com/markkimsal/statsd-elasticsearch-backend.git
 
 ADD config.js /etc/statsd/statsd.js
 
