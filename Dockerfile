@@ -7,7 +7,7 @@ RUN apk update && \
 
 RUN mkdir /etc/statsd
 
-ADD config.js /etc/stastd/statsd.js
+ADD config.js /etc/statsd/statsd.js
 
 ENV GRAPHITE_GLOBAL_PREFIX stats
 ENV GRAPHITE_LEGACY_NAMESPACE false
