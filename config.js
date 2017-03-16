@@ -103,16 +103,23 @@ Optional Variables:
 */
 (function() {
     return {
-        graphitePort: parseInt(process.env.GRAPHITE_PORT),
-        graphiteHost: process.env.GRAPHITE_HOST,
+        backends: [ 'statsd-elasticsearch-backend' ],
         port: parseInt(process.env.STATSD_PORT),
         dumpMessages: process.env.STATSD_DUMP_MSG == "true",
         debug: process.env.STATSD_DEBUG == "true",
         flushInterval: parseInt(process.env.STATSD_FLUSH_INTERVAL),
 
-        graphite: {
-            globalPrefix: process.env.GRAPHITE_GLOBAL_PREFIX,
-            legacyNamespace: process.env.GRAPHITE_LEGACY_NAMESPACE == 'true'
-        }
+        elasticsearch: {
+           port:          process.env.ELASTICSEARCH_PORT,
+           host:          process.env.ELASTICSEARCH_HOST,
+           path:          "/",
+           indexPrefix:   "statsd",
+           indexTimestamp: "day",     //for index statsd-2015.01.01
+           countType:     "counter",
+           timerType:     "timer",
+           timerDataType: "timer_data",
+           gaugeDataType: "gauge",
+           formatter:     "default_format"
+       }
     };
 })()
