@@ -22,7 +22,7 @@ RUN apk update && \
 RUN apk update && \
   apk add git && \
   git clone git://github.com/etsy/statsd.git /usr/local/src/statsd && \
-  npm install git://github.com/DispatchBot/statsd-elasticsearch-backend.git#8f9dc1911df73feb0c0a4abfad1a4f5d9cf4fa6a && \
+  npm install git://github.com/DispatchBot/statsd-elasticsearch-backend.git#d25d0ac6bef0ed0902f6da604113d7d7a9279094 && \
   apk del git && \
   rm -rf /var/cache/apk/*
 
