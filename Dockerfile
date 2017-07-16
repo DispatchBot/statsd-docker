@@ -1,4 +1,4 @@
-FROM node:6.10.0-alpine
+FROM node:6.11.1-alpine
 
 ENV STATSD_PORT 8125
 ENV STATSD_DUMP_MSG false
